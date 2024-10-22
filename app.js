@@ -13,20 +13,16 @@ const port = process.env.PORT || 5000;
 const DB_url = process.env.DATABASE_URL;
 
 
-const main = async () => {
+async function main() {
     await mongoose.connect(DB_url);
-    app.get('/', (req, res) => {
+    app.use('/', (req, res) => {
         res.send("Hello World");
     });
     
 }
 
 
-main().then(() => {
-    console.log("all good");
-}).catch((err) => {
-    console.log(`We are getting error \n ${err}`);
-})
+main().then(() => console.log("all good")).catch((err) => console.log(`We are getting error \n ${err}`));
 
 
 
