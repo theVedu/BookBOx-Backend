@@ -2,10 +2,11 @@
   "name": "bookbox-backend",
   "version": "1.0.0",
   "description": "BookBOx Backedn for cross-platform app's",
+  "type": "module",
   "main": "app.js",
   "scripts": {
     "test": "node app.js",
-    "dev": "nodemon app.js"
+    "dev": "nodemon src/index.js"
   },
   "author": "Vibhu Sahu",
   "license": "MIT License",
